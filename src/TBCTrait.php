@@ -59,7 +59,7 @@ trait TBCTrait
      */
     private function parse($string)
     {
-        $params = explode(PHP_EOL, trim($string));
+        $params = explode("\n", trim($string));
         $result = [];
 
         foreach ($params as $param) {
