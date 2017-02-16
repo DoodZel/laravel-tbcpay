@@ -33,10 +33,10 @@ class TBC
         return $this->parse(
             $this->cURL(
                 $this->queryString(
-                    array_merge([
-                        'command' => $command,
-                        $data,
-                    ])
+                    array_merge(
+                        ['command' => $command],
+                        $data
+                    )
                 )
             )
         );
