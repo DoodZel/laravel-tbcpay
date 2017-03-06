@@ -2,6 +2,8 @@
 
 namespace Gabievi\TBC;
 
+use Illuminate\Support\Facades\Request;
+
 class TBC
 {
     use TBCTrait;
@@ -19,7 +21,7 @@ class TBC
         $this->certPath = config('tbc.cert_path');
         $this->certPass = config('tbc.cert_pass');
 
-        $this->clientIp = request()->getClientIp();
+        $this->clientIp = Request::getClientIp();
     }
 
     /**
